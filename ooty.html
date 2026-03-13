@@ -449,6 +449,38 @@
             }, 2000);
           </script>
         </div>
+        <div class="col-md-4">
+          <div class="tour-card">
+            <img class="auto-changekf" src="">
+            <!-- Overlay Content -->
+            <div class="overlay">
+              <div>
+                <h5>Kotagiri Falls</h5>
+                Kotagiri Falls is a beautiful natural waterfall located near Kotagiri, a hill station in the Nilgiri Hills. The falls are surrounded by green forests, tea plantations, and cool mountain air, making it a peaceful tourist spot.
+            </div>
+            </div>
+            <h5>Kotagiri Falls</h5>
+            <p>Serene waterfalls hidden in Kotagiri forests🌳💦.</p>
+            <button>Know More</button>
+          </div>
+          <script>
+            const autoChangekf = document.querySelector('.auto-changekf');
+            const autoChangeImageskf = [
+              'https://res.cloudinary.com/svbs/image/upload/v1773401737/kotagiri_falls_u5ey3c.jpg',
+              'https://res.cloudinary.com/svbs/image/upload/v1773401678/kotagiri-falls2_xruuon.jpg',
+              'https://res.cloudinary.com/svbs/image/upload/v1773401665/kotagiri-falls_hhaaxu.jpg',
+              'https://res.cloudinary.com/svbs/image/upload/v1773401664/kotagiri-falls1_jypeub.jpg'
+               ];
+            let autoChangeIndexkf = 0;
+            // Set first image immediately
+            autoChangekf.src = autoChangeImageskf[0];
+            // Start interval
+            setInterval(() => {
+              autoChangeIndexkf = (autoChangeIndexkf + 1) % autoChangeImageskf.length;
+              autoChangekf.setAttribute("src", autoChangeImageskf[autoChangeIndexkf]);
+            }, 2000);
+          </script>
+        </div>
         
         </div>
     </div>
